@@ -13,6 +13,7 @@ const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/product');
 const cartRoutes = require('./routes/cart');
 const orderRoutes = require('./routes/order');
+const stripeRoutes = require('./routes/stripe')
 
 //MIDDLEWARE
 app.use(cors());
@@ -34,3 +35,4 @@ app.use('/api/user', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/carts', cartRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/checkout', stripeRoutes);
